@@ -1,0 +1,121 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.pageContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(212, 236, 236);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.heading{
+    padding: 1.3rem;
+    background-color: #4e84e7d4;
+    min-width: 100vw;
+    text-align: center;
+}
+.heading h1{
+    color: rgb(39, 38, 37);
+    font-size: 2.4rem;
+}
+.heading p{
+    color: #272625;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+.message{
+    min-width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: #e7cfcf;
+    font-size: 25px;
+    font-family: -webkit-pictograph;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+.formContainer{
+    margin-top: 1rem;
+    width: 25rem;
+    height: 30.9rem;
+    background-image: linear-gradient(#4cc767, #c7924c);
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 5px 15px 20px #888888;
+}
+.formElement{
+    margin: 1.1rem 0;
+}
+.formContainer .block{
+    padding: 0.3rem 0rem;
+    display: block;
+    font-size: 1.4rem;
+}
+.formContainer input{
+    padding: 0.5rem;
+    width: 22rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    color: black;
+}
+#hideShow{
+    font-size: 11px;
+    position: absolute;
+    left: 977px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#hideShow:hover{
+    font-weight: bolder;
+}
+.signUpBtn{
+    padding: 0.4rem 0.2rem;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: cyan;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 12rem;
+    transition: background-color 0.2s linear;
+    margin-left: 4.6rem;
+    margin-top: 0.5rem;
+}
+.signUpBtn:hover{
+    background-color: #4cc767;
+}
+.forLogin{
+    margin-top: 3rem;
+    width: 25rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.loginBtn {
+    padding: 0.4rem 0.2rem;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: rgb(10, 156, 241);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bolder;
+    width: 12rem;
+    transition: background-color 0.2s linear;
+}
+.forLogin a{
+    text-decoration: none;
+}
+.loginBtn:hover{
+    background-color: rgb(9, 255, 0);
+} 
+.errorLabel{
+    color: rgb(240, 75, 75);
+    position: absolute;
+    left: 665px;
+    margin-top: 35px;
+    font-size: 15px;
+}
