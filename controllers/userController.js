@@ -1,15 +1,6 @@
 const dbHelper = require("./dbHelper");
 const table = 'users';
 
-const checkUsername = function(unameArr, uname){
-//    for(let i = 0; i < unameArr.length; i++){
-//        if(unameArr[i].username == uname){
-//            return true;
-//        }
-//    }
-//    return false;
-}
-
 module.exports = {
     register : (req, res)=>{
         let formInfo = req.body;
@@ -19,19 +10,17 @@ module.exports = {
             if(err){
                 return res.send(err);
             }else{
-                console.log(uname.username , uname.length);
-                console.log(uname[0].username , uname.length);
-                // if(uname.username && uname.length){
-                //     return res.json(false);
-                // }else{
-                //     dbHelper.execute(queryForRegister, (err)=>{
-                //         if(err){
-                //             return res.send(err);
-                //         }else{
-                //             return res.json(true);
-                //         }
-                //     });
-                // }
+                if(uname.length && uname[0].username){
+                    return res.json(false);
+                }else{
+                    dbHelper.execute(queryForRegister, (err)=>{
+                        if(err){
+                            return res.send(err);
+                        }else{
+                            return res.json(true);
+                        }
+                    });
+                }
             }
         });
         

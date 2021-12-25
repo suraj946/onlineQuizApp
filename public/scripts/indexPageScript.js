@@ -22,7 +22,7 @@ $(function(){
                 required:true,
                 minlength:2
             },
-            userName:{
+            username:{
                 required:true,
                 minlength:6
             },
@@ -35,18 +35,12 @@ $(function(){
                 equalTo:"#password"
             }
         },
-        submitHandler:function(e){
-            let formData = {};
-            formData.fname = $("#fname").val();
-            formData.lname = $("#lname").val();
-            formData.username = $("#userName").val();
-            formData.password = $("#password").val();
+        submitHandler:function(){
+            let formData = $("form").serialize();
             $.ajax({
                 type:'post',
                 url:'/register',
-                dataType:'json',
-                contentType:'application/json',
-                data:JSON.stringify(formData),
+                data:formData,
                 success:function(isDone){
                     if(isDone){
                         let msg = "Registration done please login by clicking the login button below.";

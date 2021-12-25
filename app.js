@@ -1,6 +1,5 @@
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
-const bodyParser = require("body-parser");
 const mainController = require("./controllers/mainController");
 const userController = require("./controllers/userController");
 const app = express();
@@ -13,7 +12,10 @@ app.use(express.static('public'));
 app.use("/css", express.static(__dirname + "public/css"));
 app.use("/scripts", express.static(__dirname + "public/scripts"));
 
-app.use(bodyParser.json({extended:true}));
+// app.use(bodyParser.json({extended:true}));
+// app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.json());
+app.use(express.urlencoded());
 
 app.get("/", mainController.homePage);
 app.post("/register", userController.register);

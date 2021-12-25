@@ -39,15 +39,15 @@
 .formContainer{
     margin-top: 1rem;
     width: 25rem;
-    height: 30.9rem;
     background-image: linear-gradient(#4cc767, #c7924c);
     display: flex;
     justify-content: center;
     border-radius: 1rem;
     box-shadow: 5px 15px 20px #888888;
+    padding: 0 0 5px;
 }
 .formElement{
-    margin: 1.1rem 0;
+    margin: 0.6rem 0 0;
 }
 .formContainer .block{
     padding: 0.3rem 0rem;
@@ -61,12 +61,16 @@
     border-radius: 0.4rem;
     font-size: 0.9rem;
     color: black;
+    display: block;
+}
+.passwordField{
+    position: relative;
 }
 #hideShow{
     font-size: 11px;
     position: absolute;
-    left: 977px;
-    margin-top: 10px;
+    top: 45px;
+    right: 8px;
     cursor: pointer;
 }
 #hideShow:hover{
@@ -89,7 +93,7 @@
     background-color: #4cc767;
 }
 .forLogin{
-    margin-top: 3rem;
+    margin-top: 1rem;
     width: 25rem;
     text-align: center;
     font-size: 2rem;
@@ -114,8 +118,5 @@
 } 
 .errorLabel{
     color: rgb(240, 75, 75);
-    position: absolute;
-    left: 665px;
-    margin-top: 35px;
-    font-size: 15px;
+    display: block !important;
 }
