@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(215, 240, 240);
+}
+.errMsgContainer{
+    width: 60vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+    border-radius: 5px;
+    box-shadow: 13px 15px 29px #9d968d;
+}
+.errMsgContainer .text-404{
+    font-size: 100px;
+    font-family: emoji;
+    padding: 14px 14px 0 14px;
+}
+.errMessage{
+    font-family: monospace;
+    font-size: 30px;
+}
+.errDesc{
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size: 22px;
+}
+.errMsgContainer a{
+    text-decoration: none;
+    padding: 7px 50px;
+    font-size: 25px;
+    background-color: #24f9f9;
+    color: black;
+    border-radius: 5px;
+    margin: 15px;
+    transition: background-color 0.2s linear;
+}
+.errMsgContainer a:hover{
+    background-color: rgb(41, 235, 41);
+}

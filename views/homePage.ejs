@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="css/homePage.css">
+<script defer src="scripts/homePageScript.js"></script>
+<div class="message">This is a message</div>
+<div class="pageContent">
+    <div class="greet">
+        <p class="welcomeText sameGreetCls">Hello :)</p>
+        <p class="fullName sameGreetCls"><%=details.fullName%></p>
+        <p class="isAdmin sameGreetCls"><%=(details.isAdmin) ? "Admin" : "Player"%></p>
+    </div>
+    <div class="inputFields">
+        <label for="noOfQuestion">Specify the number of questions.</label>
+        <input type="number" id="noOfQuestions" placeholder="Number between 5-100*">
+        <button class="btn" id="btnPlay" >Start Quiz</button>
+    </div>
+    <div class="quizContent">
+        <div class="questionContainer">
+            <div id="question"></div>
+        </div>
+        <div class="optionContainer">
+            <div class="leftOptions">
+                <div class="options">
+                    <input type="radio" name="option" id="option-1">
+                    <label for="option-1"></label>
+                </div>
+                <div class="options">
+                    <input type="radio" name="option" id="option-2">
+                    <label for="option-2"></label>
+                </div>
+            </div>
+           <div class="rightOptions">
+                <div class="options">
+                    <input type="radio" name="option" id="option-3">
+                    <label for="option-3"></label>
+                </div>
+                <div class="options">
+                    <input type="radio" name="option" id="option-4">
+                    <label for="option-4"></label>
+                </div>
+           </div> 
+        </div>
+        <div class="btnCont">
+            <button class="btn" id="nextQuestion">Next Question</button>
+        </div>
+    </div>
+    <div class="resultContainer">
+        <div class="score">
+            <p id="resultText"></p>
+            <p class="sm">Summary</p>
+        </div>
+        <div class="summary"></div>
+        <div class="btnCont">
+            <button class="btn" id="replayBtn">Replay</button>
+        </div>
+    </div>
+</div>

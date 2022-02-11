@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="css/userPage.css">
+<script defer src="scripts/jquery.js"></script>
+<script defer src="scripts/userPageScript.js"></script>
+<div class="message"></div>
+<div class="pageContent">
+    <div class="userTable">
+        <table>
+            <tbody id="tableBody">
+                <tr>
+                    <th>SN</th>
+                    <th>User Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                    <th>IsAdmin</th>
+                    <th>Action</th>
+                </tr>
+                <% data.forEach((elem, i)=>{ %>
+                    <tr>
+                        <td><%=i+1%></td>
+                        <td><%=elem.userId%></td>
+                        <td><%=elem.fname%></td>
+                        <td><%=elem.lname%></td>
+                        <td><%=elem.username%></d>
+                        <td><%=elem.isAdmin%></td>
+                        <td><button class="updateRoleBtn myBtn" isAdmin="<%=elem.isAdmin%>" uId="<%=elem.userId%>"><%=elem.isAdmin?"Make User":"Make Admin"%></button></td>   
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>

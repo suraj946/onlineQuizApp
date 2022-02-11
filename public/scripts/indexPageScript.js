@@ -1,72 +1,10 @@
-
-$(function(){
-
-    let showMessage = function(bgColor, message){
-        let msgElement = $(".message");
-        msgElement.text(message);
-        msgElement.css({"background-color":bgColor, "opacity":1});  
-        if(bgColor == '#ff0000'){
-            setTimeout(()=>{
-                msgElement.css({"opacity":0});  
-            }, 3000);
-        }
-    }
-
-    $("#registerForm").validate({
-        rules:{
-            fname:{
-                required:true,
-                minlength:2
-            },
-            lname:{
-                required:true,
-                minlength:2
-            },
-            username:{
-                required:true,
-                minlength:6
-            },
-            password:{
-                required:true,
-                minlength:8
-            },
-            confirmPassword:{
-                required:true,
-                equalTo:"#password"
-            }
-        },
-        submitHandler:function(){
-            let formData = $("form").serialize();
-            $.ajax({
-                type:'post',
-                url:'/register',
-                data:formData,
-                success:function(isDone){
-                    if(isDone){
-                        let msg = "Registration done please login by clicking the login button below.";
-                        showMessage("#078f07", msg);
-                        $("#registerForm").trigger("reset");
-                    }else{
-                        let msg = "This username has already been taken, try other.";
-                        $("#userName").focus();
-                        showMessage("#ff0000", msg);
-
-                    }
-                }
-            })
-            return false;
-        }
-    });
-
-    $("#hideShow").on('click', ()=>{
-        if($("#hideShow").html() == "Show"){
-            $("#password").attr("type", "text");
-            $("#confirmPassword").attr("type", "text");
-            $("#hideShow").html("Hide");
-        }else{
-            $("#password").attr("type", "password");
-            $("#confirmPassword").attr("type", "password");
-            $("#hideShow").html("Show");
-        }
-    });  
-});
+let typed = new Typed('.typed', {
+    strings: ['Hello users :)', 'Its me Scoder.', "Here you can play quiz game.", "It helps you to boost your knowledge.","Login and play :)", "Have fun"],
+    typeSpeed: 40,
+    backSpeed: 40,
+    loop:true,
+    loopCount:'infinity',
+    showCursor: true,
+    cursorChar: '|',
+    autoInsertCss: true
+  });

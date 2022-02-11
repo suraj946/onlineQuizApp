@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="css/loginPage.css">
+<div class="message"></div>
+<div class="loginPageCont">
+    <h1>Login Here</h1>
+    <div class="formCont">
+        <form id="loginForm">
+            <div class="formElem">
+                <label class="block" for="username">User Name</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username">
+                <label id="username-error" class="error errorLabel" for="username">&nbsp;</label>
+            </div>
+            <div class="formElem passwordField">
+                <label class="block" class="block" for="password">Enter a password</label>
+                <input type="password" name="password" id="password" placeholder="Enter a password">
+                <span id="hideShow">Show</span>
+                <label id="password-error" class="error errorLabel" for="password">&nbsp;</label>
+            </div>
+            <div class="temp">
+                <button type="submit" class="login-btn">Login</button>
+            </div>
+        </form>
+    </div>
+    <div class="forRegister">
+        <p>Do not have an account ?</p>
+        <a href="/registerPage"><button class="registerBtn">Create Account</button></a>
+    </div>
+</div>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/loginPageScript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>

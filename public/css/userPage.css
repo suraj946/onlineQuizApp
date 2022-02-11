@@ -1,0 +1,30 @@
+.pageContent{
+    margin-top: 20px;
+}
+.userTable{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px 15px;
+    font-size: 20px;
+    text-align: center;
+    font-family: system-ui;
+}
+.myBtn{
+    outline: none;
+    border: none;
+    padding: 6px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    background-color: rgb(14, 179, 255);
+    transition: background-color 0.2s;
+    color: black;
+}
+.updateRoleBtn:hover{
+    background-color: rgb(0, 238, 0);
+}

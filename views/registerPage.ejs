@@ -1,0 +1,44 @@
+<link rel="stylesheet" type="text/css" href="css/registerPage.css">
+<div class="pageContent">
+    <div class="message"></div>
+    <div class="formContainer">
+        <form id="registerForm">
+            <div class="formElement">
+                <label class="block" for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter your first name">
+                <label id="fname-error" class="error errorLabel" for="fname">&nbsp;</label>
+            </div>
+            <div class="formElement">
+                <label class="block" for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" placeholder="Enter your last name">
+                <label id="lname-error" class="error errorLabel" for="lname">&nbsp;</label>
+            </div>
+            <div class="formElement">
+                <label class="block" for="username">Enter a username</label>
+                <input type="text" name="username" id="username" placeholder="Enter a username">                
+                <label id="username-error" class="error errorLabel" for="username">&nbsp;</label>
+            </div>
+            <div class="formElement passwordField">
+                <label class="block" for="password">Enter a password</label>
+                <input type="password" name="password" id="password" placeholder="Enter a password">
+                <span id="hideShow">Show</span>
+                <label id="password-error" class="error errorLabel" for="password">&nbsp;</label>
+            </div>
+            <div class="formElement">
+                <label class="block" for="confirmPassword">Confirm password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter password again">
+                <label id="confirmPassword-error" class="error errorLabel" for="confirmPassword">&nbsp;</label>
+            </div>
+            <div class="formElement temp">
+                <button class="signUpBtn" id="btnSignUp" type="submit">Sign Up</button>
+            </div>  
+        </form>
+    </div>
+    <div class="forLogin">
+        <p>Already have an account ?</p>
+        <a href="/loginpage"><button class="loginBtn">login</button></a>
+    </div>
+</div>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/registerPageScript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>

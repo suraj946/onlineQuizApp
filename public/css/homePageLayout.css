@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(198, 240, 240);
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(24, 182, 230);
+}
+.leftOpt{
+    display: flex;
+    justify-content: center;
+}
+.commonCls{
+    padding: 20px 35px;
+    font-size: 18px;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+.commonCls:hover{
+    background-color: rgb(119, 243, 119);
+    font-weight: bold;
+}
+.rightOpt a{
+    text-decoration: none;
+    color: black;
+    padding: 20px 35px;
+    font-size: 18px;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    border-radius: 5px;
+}
+.rightOpt a:hover{
+    background-color: rgb(243, 86, 86);
+    font-weight: bold;
+}
+.active{
+    background-color: rgb(81, 235, 10);
+}

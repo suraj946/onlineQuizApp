@@ -1,0 +1,107 @@
+.loginPageCont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7rem;
+}
+.message{
+    min-width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: #e7cfcf;
+    font-size: 25px;
+    font-family: -webkit-pictograph;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+.loginPageCont h1{
+    font-family: monospace;
+}
+.formCont{
+    margin-top: 1rem;
+    width: 25rem;
+    border-radius: 1rem;
+    box-shadow: 5px 15px 20px #888888;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.formElem{
+    margin: 0.6rem 0 1.7rem 0;
+}
+.formCont .block{
+    padding: 0.3rem 0rem;
+    display: block;
+    font-size: 1.4rem;
+}
+.formCont input{
+    padding: 0.5rem;
+    width: 22rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    color: black;
+    display: block;
+}
+.temp{
+    display: flex;
+    justify-content: center;
+}
+.passwordField{
+    position: relative;
+}
+#hideShow{
+    font-size: 11px;
+    position: absolute;
+    top: 45px;
+    right: 8px;
+    cursor: pointer;
+}
+#hideShow:hover{
+    font-weight: bolder;
+}
+
+.login-btn{
+    padding: 0.4rem 0.2rem;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: cyan;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 12rem;
+    transition: background-color 0.2s linear;
+}
+.login-btn:hover{
+    background-color: #4cc767;
+}
+
+
+.forRegister{
+    margin-top: 4rem;
+    width: 25rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.registerBtn {
+    padding: 0.4rem 0.2rem;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: rgb(10, 156, 241);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bolder;
+    width: 12rem;
+    transition: background-color 0.2s linear;
+}
+.forRegister a{
+    text-decoration: none;
+}
+.registerBtn:hover{
+    background-color: rgb(9, 255, 0);
+} 
+.errorLabel{
+    color: rgb(240, 75, 75);
+    font-size: 15px;
+}
